@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لعبة تعلم الحروف العربية</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شاشة البدء لتفادي منع المتصفح للصوت -->
+  <div id="startScreen" class="start-screen">
+    <div class="start-card">
+      <h1>مرحباً بك يا بطلة! 🌸</h1>
+      <p>اضغط هنا لبدء اللعبة وتشغيل الصوت</p>
+      <button id="startBtn" class="btn-start">ابدأ اللعبة 🔊</button>
+    </div>
+  </div>
+
+  <div class="game-card">
+    <header class="game-header">
+      <div class="score-board">
+        <span>⭐ النقاط:</span>
+        <span id="score">0</span>
+      </div>
+      <h1 class="title">خَمّن الحَرْف! 🎈</h1>
+    </header>
+
+    <main class="game-body">
+      <!-- بطاقة الحرف المستهدف -->
+      <div class="target-card" id="targetCard">
+        <span class="speaker-icon">🔊</span>
+        <span class="target-char" id="targetChar">؟</span>
+      </div>
+
+      <p class="instruction">اضغط على البطاقة لسماع الصوت، ثم اختر الشكل الصحيح:</p>
+
+      <!-- خيارات الحروف الأربعة -->
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <!-- رسالة التغذية الراجعة -->
+      <div class="feedback" id="feedback"></div>
+    </main>
+
+    <footer class="game-footer">
+      <button class="btn-next" id="nextBtn">الحرف التالي ➔</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
